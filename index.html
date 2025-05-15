@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Rush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <main class="container">
+    <h1 class="game-title">🚀 Code Rush</h1>
+    <p class="tagline">Type fast. Hack faster.</p>
+
+    <div class="button-group">
+      <button class="btn" id="startBtn">Start Game</button>
+      <button class="btn" id="difficultyBtn">Difficulty</button>
+      <button class="btn overlay-btn" data-overlay="about-game">About Game</button>
+      <button class="btn overlay-btn" data-overlay="about-dev">About Dev</button>
+    </div>
+  </main>
+
+  <!-- Overlay: About Game -->
+  <div class="overlay" id="about-game">
+    <div class="overlay-content">
+      <h2>About the Game</h2>
+      <p>Code Rush is a typing game where you race to type code words before time runs out. Speed and accuracy are key!</p>
+      <button class="close-btn" onclick="closeOverlay('about-game')">Close</button>
+    </div>
+  </div>
+
+  <!-- Overlay: About Developer -->
+  <div class="overlay" id="about-dev">
+    <div class="overlay-content">
+      <h2>About the Developer</h2>
+      <p>This game was built by Sam as part of a Quarter 4 project in the Beauty & Joy of Computing course. Hosted on GitHub Pages.</p>
+      <button class="close-btn" onclick="closeOverlay('about-dev')">Close</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
