@@ -9,13 +9,19 @@
 <body>
   <div class="background-animation"></div>
 
+  <!-- 🔺 NAVBAR -->
+  <nav class="navbar">
+    <span class="logo">Code Rush</span>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="#gameBox" class="nav-link" id="startBtn">Play</a>
+  </nav>
+
   <!-- Title Screen -->
   <main class="container" id="titleScreen">
     <h1 class="game-title">🚀 Code Rush</h1>
     <p class="tagline">Type fast. Hack faster.</p>
     <div class="button-group">
-      <button class="btn" id="startBtn">Start Game</button>
-      <button class="btn" id="difficultyBtn">Difficulty</button>
+      <button class="btn" id="openDifficultyOverlay">Difficulty</button>
       <button class="btn overlay-btn" data-overlay="about-game">About Game</button>
       <button class="btn overlay-btn" data-overlay="about-dev">About Dev</button>
     </div>
@@ -39,7 +45,17 @@
     <div id="missedWordsDisplay"></div>
   </div>
 
-  <!-- Overlay: About Game -->
+  <!-- 🔹 Difficulty Overlay -->
+  <div class="overlay" id="difficultyOverlay">
+    <div class="overlay-content">
+      <h2>Select Difficulty</h2>
+      <button class="btn" onclick="setDifficulty('easy')">Easy</button>
+      <button class="btn" onclick="setDifficulty('hard')">Hard</button>
+      <button class="close-btn" onclick="closeOverlay('difficultyOverlay')">Close</button>
+    </div>
+  </div>
+
+  <!-- About Overlays -->
   <div class="overlay" id="about-game">
     <div class="overlay-content">
       <h2>About the Game</h2>
@@ -48,7 +64,6 @@
     </div>
   </div>
 
-  <!-- Overlay: About Developer -->
   <div class="overlay" id="about-dev">
     <div class="overlay-content">
       <h2>About the Developer</h2>
@@ -56,6 +71,11 @@
       <button class="close-btn" onclick="closeOverlay('about-dev')">Close</button>
     </div>
   </div>
+
+  <!-- 🔻 FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Sam | <a href="https://samuelesnow.co" target="_blank">samuelesnow.co</a></p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
