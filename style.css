@@ -1,0 +1,127 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #1f1f1f, #000000);
+  animation: pulse 10s infinite alternate ease-in-out;
+  z-index: -1;
+}
+@keyframes pulse {
+  0% {
+    background: radial-gradient(circle at center, #1f1f1f, #000000);
+  }
+  100% {
+    background: radial-gradient(circle at center, #000000, #1f1f1f);
+  }
+}
+
+/* Main Container */
+.container {
+  text-align: center;
+  max-width: 90%;
+  padding: 2rem;
+  animation: fadeIn 1.5s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title & Tagline */
+.game-title {
+  font-size: 3rem;
+  color: #00ffd0;
+  text-shadow: 0 0 10px #00ffd0;
+  margin-bottom: 0.5rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #00ffd0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #00ffd0;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Overlays */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.overlay-content {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border: 2px solid #00ffd0;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 15px #00ffd0;
+  animation: overlayIn 0.4s ease-out;
+}
+@keyframes overlayIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.close-btn {
+  margin-top: 1.5rem;
+  background: none;
+  border: 2px solid #00ffd0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #00ffd0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  background-color: #00ffd0;
+  color: #000;
+}
