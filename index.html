@@ -9,7 +9,8 @@
 <body>
   <div class="background-animation"></div>
 
-  <main class="container">
+  <!-- Title Screen -->
+  <main class="container" id="titleScreen">
     <h1 class="game-title">🚀 Code Rush</h1>
     <p class="tagline">Type fast. Hack faster.</p>
 
@@ -20,6 +21,15 @@
       <button class="btn overlay-btn" data-overlay="about-dev">About Dev</button>
     </div>
   </main>
+
+  <!-- Game Box (hidden until game starts) -->
+  <div id="gameBox" class="game-box" style="display: none;">
+    <p><strong>Word:</strong> <span id="wordDisplay">---</span></p>
+    <input type="text" id="userInput" placeholder="Type the word..." autocomplete="off" />
+    <p><strong>Score:</strong> <span id="scoreDisplay">0</span></p>
+    <p><strong>Time:</strong> <span id="timeDisplay">0</span>s</p>
+    <button id="restartBtn">Restart</button>
+  </div>
 
   <!-- Overlay: About Game -->
   <div class="overlay" id="about-game">
