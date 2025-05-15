@@ -1,36 +1,32 @@
-// Overlay toggle
-const overlayButtons = document.querySelectorAll('.overlay-btn');
-overlayButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.getAttribute('data-overlay');
-    openOverlay(target);
-  });
-});
-
-function openOverlay(id) {
-  document.getElementById(id).style.display = 'flex';
+.game-box {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border: 2px solid #00ffd0;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00ffd0;
+  text-align: center;
 }
-
-function closeOverlay(id) {
-  document.getElementById(id).style.display = 'none';
+.game-box input {
+  margin: 1rem 0;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
 }
-
-// Game state variables
-let difficulty = 'easy'; // can be 'easy' or 'hard'
-
-// Start Game
-document.getElementById('startBtn').addEventListener('click', () => {
-  alert('Game will start (build out gameplay here)...');
-  // You can later replace this alert with `initGame()` or another function
-});
-
-// Difficulty toggle
-document.getElementById('difficultyBtn').addEventListener('click', () => {
-  if (difficulty === 'easy') {
-    difficulty = 'hard';
-    alert('Difficulty set to HARD');
-  } else {
-    difficulty = 'easy';
-    alert('Difficulty set to EASY');
-  }
-});
+#restartBtn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #00ffd0;
+  color: #00ffd0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#restartBtn:hover {
+  background-color: #00ffd0;
+  color: #000;
+}
